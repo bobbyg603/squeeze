@@ -40,7 +40,7 @@ public class Program
 
             if (!inputFile.Exists)
             {
-                Log.Info($"Zippy failed, input file {inputFile.FullName} does not exist");
+                Log.Info($"Squeeze failed, input file {inputFile.FullName} does not exist");
                 // TODO BG how do we get dotnet to fail with non-zero return code?
                 Environment.Exit(-1);
             }
@@ -54,17 +54,17 @@ public class Program
             zip.Settings.Overwrite = force;
             zip.Settings.Interceptors.Add((f) => Log.Verbose($"Adding {f.FullName}..."));
 
-            Log.Info($"Running zippy with input {inputFile.FullName}...");
+            Log.Info($"Running squeeze with input {inputFile.FullName}...");
 
             var result = zip.Write();
 
             if (result == ZipWriteResult.OverwriteError)
             {
-                Log.Info($"Zippy failed, {outputFile.FullName} exists and overwrite is false");
+                Log.Info($"Squeeze failed, {outputFile.FullName} exists and overwrite is false");
                 Environment.Exit(-1);
             }
 
-            Log.Info($"Zippy created {outputFile.FullName}");
+            Log.Info($"Squeeze created {outputFile.FullName}");
         };
 
         rootCommand.SetHandler(handler, inputFileArg, outputFileArg, forceOption, verboseOption);

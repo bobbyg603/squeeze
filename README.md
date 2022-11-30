@@ -1,26 +1,26 @@
-# Zippy
+# Squeeze
 
-Zippy contains a .NET 7.0 command-line tool for creating zip files from [glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)).
+Squeeze contains a .NET 7.0 command-line tool for creating zip files from [glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)).
 
 ## ⚙️ Installation
 
-The `Zippy` command-line tool can be installed globally via [dotnet](https://dotnet.microsoft.com/).
+The `Squeeze` command-line tool can be installed globally via [dotnet](https://dotnet.microsoft.com/).
 
 ```sh
-dotnet tool install -g Zippy
+dotnet tool install -g Squeeze
 ```
 
 ## 🏗️ Usage
 
-Run `dotnet zippy -h` to see usage information.
+Run `dotnet squeeze -h` to see usage information.
 
 ```sh
-C:\Users\bobby> dotnet zippy -h
+C:\Users\bobby> dotnet squeeze -h
 Description:
   Create a zip via a manifest file containing glob pattern rules
 
 Usage:
-  zippy <input> <output> [options]
+  squeeze <input> <output> [options]
 
 Arguments:
   <input>   Zip file manifest containing glob patterns of file paths to include
