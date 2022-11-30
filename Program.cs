@@ -1,15 +1,5 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 using ZipCreator;
-
-//
-// This C# program creates a zip archive from a file containing a list of files to include in the archive.
-// Paths in the provided inputFilePath text file should be relative to the input files location.
-// Add an interceptor to perform actions on files before zipping such as code signing.
-// Readonly attributes are cleared prior to zipping and restored afterwards.
-//
-// Usage:
-// zippy <path to file containing list of files> <path to zip archive that will be created> [...options]
-//
 
 public class Program
 {
